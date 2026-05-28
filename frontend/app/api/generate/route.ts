@@ -5,11 +5,11 @@ const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 export async function POST(req: NextRequest) {
   try {
-    const { topic, domain, complexity, style } = await req.json();
+    const { topic, domain, style } = await req.json();
 
     const prompt = `Generate a structured research paper on the topic: "${topic}"
 Domain: ${domain}
-Complexity: ${complexity}
+Audience: Standard (accessible to a broad, general academic audience)
 Writing Style: ${style}
 
 Return ONLY a valid JSON object with exactly these keys, no extra text, no markdown, no backticks:

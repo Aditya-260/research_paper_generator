@@ -10,6 +10,10 @@ export default function Home() {
         <div className="flex gap-4">
           <Link href="/generate" className="text-sm text-gray-400 hover:text-white transition">Generate</Link>
           <Link href="/detect" className="text-sm text-gray-400 hover:text-white transition">Detect</Link>
+          <Link href="/train" className="text-sm text-gray-400 hover:text-white transition flex items-center gap-1">
+            <span className="w-1.5 h-1.5 rounded-full bg-green-400 inline-block"/>
+            Train Model
+          </Link>
         </div>
       </nav>
 
